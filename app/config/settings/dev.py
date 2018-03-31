@@ -9,4 +9,4 @@ INSTALLED_APPS += [
 ]
 
 set_config(secrets, module_name=__name__, start=True)
-print(getattr(sys.modules[__name__], 'DATABASES'))
+# print(getattr(sys.modules[__name__], 'DATABASES'))
