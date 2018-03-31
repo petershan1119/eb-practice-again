@@ -65,7 +65,7 @@ def set_config(obj, module_name=None, start=False):
             # 없는 변수를 참조할 때 발생하는 예외
             return obj
         except Exception as e:
-            print(f'Cannot eval object({obj}), Exception: {e}')
+            # print(f'Cannot eval object({obj}), Exception: {e}')
             return obj
             # raise ValueError(f'Cannot eval object({obj}), Exception: {e}')
 
@@ -96,10 +96,12 @@ def set_config(obj, module_name=None, start=False):
 # raven모듈을 importlib를 사용해 가져온 후 현재 모듈에 'raven'이라는 이름으로 할당
 setattr(sys.modules[__name__], 'raven', importlib.import_module('raven'))
 set_config(secrets, module_name=__name__, start=True)
-print(getattr(sys.modules[__name__], 'RAVEN_CONFIG'))
+# print(getattr(sys.modules[__name__], 'RAVEN_CONFIG'))
 
 
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'members.User'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -110,6 +112,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'raven.contrib.django.raven_compat',
+
+    'members',
 ]
 
 MIDDLEWARE = [
