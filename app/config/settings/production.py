@@ -8,7 +8,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    '.elasticbeanstalk.com'
+    '.elasticbeanstalk.com',
+    '.sangwonhan.com'
 ]
 WSGI_APPLICATION = 'config.wsgi.production.application'
 INSTALLED_APPS += [
