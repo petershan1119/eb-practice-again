@@ -1,3 +1,6 @@
+/.media
+/.static
+/.secrets
 .secrets/
 
 # Created by https://www.gitignore.io/api/git,macos,python,django,pycharm+all
